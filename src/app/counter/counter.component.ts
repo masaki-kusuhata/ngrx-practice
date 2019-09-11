@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { CounterUsecase } from './store/counter.usecase';
-import { CounterQuery } from './store/counter.query';
+import { CounterUsecase } from './store/usecases/counter.usecase';
+import { CounterQuery } from './store/queries/counter.query';
 
 @Component({
   selector: 'app-counter',
