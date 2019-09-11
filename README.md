@@ -1,5 +1,10 @@
 # NgrxTutorial
 
+- [ngrx](https://ngrx.io/docs)
+- [中規模Angularアプリケーションの再設計](https://www.slideshare.net/bitbankink/angular-159706933)
+- [@ngrx/storeと@ngrx/effectsの使い方](https://qiita.com/puku0x/items/0a8e7224761dc549bd06)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
 
 ## Development server
