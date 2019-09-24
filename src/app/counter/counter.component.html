@@ -1,3 +1,12 @@
 <button (click)="increment()">+</button>
 <button (click)="decrement()">-</button>
 <div>Count: {{ count$ | async }}</div>
+
+<hr>
+
+<button (click)="increment2()">+</button>
+<button (click)="decrement2()">-</button>
+
+<div *ngIf="count2$ | async as counter">
+  {{counter.count}}
+</div>

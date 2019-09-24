@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
-import { featureName } from './states/counter.state';
-import { reducer } from './reducers/counter.reducer';
-import { CounterEffects } from './effects/counter.effect';
+import { featureName } from './counter/counter.state';
+import { reducer } from './counter/counter.reducer';
+import { CounterEffects } from './counter/counter.effect';
 
 @NgModule({
   imports: [

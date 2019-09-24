@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 
-import { State } from '../states/counter.state';
-import * as CounterActions from '../actions/counter.action';
+import { State } from './counter.state';
+import * as CounterActions from './counter.action';
 import { CounterStoreModule } from '../counter-state.module';
 
 @Injectable({

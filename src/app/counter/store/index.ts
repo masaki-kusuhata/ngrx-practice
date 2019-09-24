@@ -1,3 +1,3 @@
 export * from './counter-state.module';
-export * from './usecases/counter.usecase';
-export * from './queries/counter.query';
+export * from './counter/counter.usecase';
+export * from './counter/counter.query';

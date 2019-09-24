@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { CounterUsecase } from './store/usecases/counter.usecase';
-import { CounterQuery } from './store/queries/counter.query';
+import { CounterUsecase } from './store/counter/counter.usecase';
+import { CounterQuery } from './store/counter/counter.query';
+
+import { CounterStore } from './store2/counter.store';
+import { Counter } from './store2/counter.state';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-counter',
@@ -11,14 +15,18 @@ import { CounterQuery } from './store/queries/counter.query';
 })
 export class CounterComponent implements OnInit {
   count$: Observable<number>;
+  count2$: Observable<Counter>;
 
   constructor(
     private counterUsecase: CounterUsecase,
-    private counterQuery: CounterQuery
+    private counterQuery: CounterQuery,
+    private counterStore: CounterStore
   ) {}
 
   ngOnInit() {
     this.count$ = this.counterQuery.count$;
+    this.count2$ = this.counterStore.data$;
+    console.log(this.counterStore.data$.pipe(map(x => x.count)));
   }
 
   increment() {
@@ -27,5 +35,13 @@ export class CounterComponent implements OnInit {
 
   decrement() {
     this.counterUsecase.decrement();
+  }
+
+  increment2() {
+    this.counterStore.increment();
+  }
+
+  decrement2() {
+    this.counterStore.decrement();
   }
 }
