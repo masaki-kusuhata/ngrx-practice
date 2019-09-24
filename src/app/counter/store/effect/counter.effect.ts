@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Effect, Actions, ofType } from '@ngrx/effects';
 import { tap } from 'rxjs/operators';
 
-import { increment, decrement } from './counter.action';
+import { increment, decrement } from '../action/counter.action';
 import { Observable } from 'rxjs';
 import { Action } from '@ngrx/store';
 

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { CounterUsecase } from './store/counter/counter.usecase';
-import { CounterQuery } from './store/counter/counter.query';
+import { CounterUsecase } from './store/usecase/counter.usecase';
+import { CounterQuery } from './store/query/counter.query';
 
 import { CounterStore } from './store2/counter.store';
 import { Counter } from './store2/counter.state';
